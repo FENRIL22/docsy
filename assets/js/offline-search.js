@@ -43,6 +43,7 @@
         // this.field('projects', { boost: 3 }); // example for an individual toxonomy called projects
         this.field('description', { boost: 2 });
         this.field('body');
+        this.use(lunr.ja);
 
         data.forEach((doc) => {
           this.add(doc);
